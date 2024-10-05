@@ -6,7 +6,6 @@ plugins {
 }
 
 android {
-    namespace = "com.example.nasa"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 

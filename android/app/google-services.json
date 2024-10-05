@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "737040695515",
+    "project_id": "gazathon-dbd3d",
+    "storage_bucket": "gazathon-dbd3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737040695515:android:79bde21b6d0acbacb7ccfe",
+        "android_client_info": {
+          "package_name": "com.example.gaza_barcode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN_FSS1gwp2LXo9BvlB9Gto1xBvEF6Fk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737040695515:android:f7d6d62315f2bf28b7ccfe",
+        "android_client_info": {
+          "package_name": "com.example.nasa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN_FSS1gwp2LXo9BvlB9Gto1xBvEF6Fk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
