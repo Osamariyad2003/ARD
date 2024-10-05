@@ -87,6 +87,7 @@ class MyFormField extends StatelessWidget {
   final dynamic validation;
   final bool isPassword;
   final   Color? fill;
+  final   Color? textcolor;
 
   const MyFormField(
       {super.key,
@@ -104,6 +105,7 @@ class MyFormField extends StatelessWidget {
         this.title="",
         this.validation,
         this.fill,
+        this.textcolor,
       });
 
   @override
