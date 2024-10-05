@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gaza_barcode/screens/home.dart';
+import 'package:nasa/companets/colors.dart';
+import 'package:nasa/companets/routing.dart';
+import 'package:nasa/companets/widgets.dart';
+import 'package:nasa/modules/login/cubit/cubit.dart';
+import 'package:nasa/modules/login/cubit/states.dart';
 
-import '../../components/constants.dart';
-import '../../components/error_dialog.dart';
-import '../../components/form_field.dart';
-import '../../components/widgets.dart';
-import 'cubit/cubit.dart';
-import 'cubit/states.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -24,7 +22,7 @@ class LoginScreen extends StatelessWidget {
       listener: (context, state) {
         if (state is LoginSuccessState) {
           showToast(text: 'Login Successful', state: ToastStates.success);
-          navigateAndFinish(context, HomeScreen()); // Navigate on success
+         /// navigateAndFinish(context, HomeScreen()); // Navigate on success
         } else if (state is LoginErrorState) {
           showDialog(
             context: context,
@@ -45,16 +43,7 @@ class LoginScreen extends StatelessWidget {
 
         return Scaffold(
           body: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  MainColor_two,
-                  MainColor_one,
-                ],
-              ),
-            ),
+            color: Colors.white70,
             child: Padding(
               padding:  EdgeInsets.all(16.0),
               child: Column(
@@ -69,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                   MyFormField(
                     title: "Email",
                     hint: "Enter your email",
-                    fill: grey_dot.withOpacity(0.1),
+                    fill: fieldColor.withOpacity(0.1),
                     hintStyle: TextStyle(color: mainColor),
                     type: TextInputType.emailAddress,
                     controller: emailController,
