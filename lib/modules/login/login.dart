@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nasa/companets/colors.dart';
 import 'package:nasa/companets/routing.dart';
 import 'package:nasa/companets/widgets.dart';
+import 'package:nasa/modules/home.dart';
 import 'package:nasa/modules/login/cubit/cubit.dart';
 import 'package:nasa/modules/login/cubit/states.dart';
 
@@ -16,13 +17,12 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+
     return BlocConsumer<LoginCubit, LoginStates>(
       listener: (context, state) {
         if (state is LoginSuccessState) {
           showToast(text: 'Login Successful', state: ToastStates.success);
-         /// navigateAndFinish(context, HomeScreen()); // Navigate on success
+         navigateAndFinish(context, HomeScreen()); // Navigate on success
         } else if (state is LoginErrorState) {
           showDialog(
             context: context,
@@ -53,8 +53,6 @@ class LoginScreen extends StatelessWidget {
                   Text('Login ',style: TextStyle(fontSize: 36,fontWeight: FontWeight.w700,color: mainColor),),
                   SizedBox(height: 8,),
                   Text('Create An Account In Medicine Code',style:TextStyle(color: mainColor,fontSize: 15) ,),
-
-
                   MyFormField(
                     title: "Email",
                     hint: "Enter your email",
@@ -74,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                   MyFormField(
                     title: "Password",
                     hint: "Enter your password",
-                    fill: grey_dot.withOpacity(0.1),
+                    fill: fieldColor.withOpacity(0.1),
                     hintStyle: TextStyle(color: mainColor,),
                     isPassword: cubit.isPassword,
                     type: TextInputType.visiblePassword,
@@ -89,22 +87,21 @@ class LoginScreen extends StatelessWidget {
                       return null;
                     },
                   ),
-
                   const SizedBox(height: 16),
                   if (state is LoginLoadingState)
                     CircularProgressIndicator()
                   else
-                    defaultButton("LOG IN",blue, () {
+                    defaultButton("LOG IN",mainColor, () {
 
                       cubit.userLogin(
                         email: emailController.text,
                         password: passwordController.text,
                         context: context,
                       );
+
                       //
 
                     },context)
-
                 ],
               ),
             ),

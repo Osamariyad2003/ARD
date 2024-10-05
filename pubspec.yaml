@@ -44,14 +44,19 @@ dependencies:
   hexcolor: ^3.0.1
   flutter_bloc: ^8.1.3
   shared_preferences: ^2.2.2
-  awesome_notifications: ^0.9.3+1
-  dropdown_textfield: ^1.1.0
   timezone: ^0.9.0
   flutter_local_notifications: ^17.1.2
   fluttertoast: ^8.0.9
   go_router: ^14.1.4
   firebase_core: ^3.6.0
   firebase_auth: ^5.3.1
+  dio: ^5.7.0
+  font_awesome_flutter: ^10.7.0
+  percent_indicator: ^4.2.3
+  conditional_builder_null_safety: ^0.0.6
+  webview_flutter: ^4.9.0
+  cloud_firestore: ^5.4.4
+  google_generative_ai: ^0.4.6
 
 
 
@@ -78,8 +83,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - aseets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

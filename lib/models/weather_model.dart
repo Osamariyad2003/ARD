@@ -1,9 +1,9 @@
 class WeatherModel{
-  double? temp;
-   int? hum;
+  late double temp;
+  late int  hum;
   WeatherModel({required this.temp,required this.hum});
   WeatherModel.fromJson(Map<String ,dynamic> json){
-    temp = (json['main']['temp'] as num).toDouble() - 273.15;
-    hum = json['main']['humidity'];
+    temp = (json['current']['temp_c'] ?? 0.0).toDouble();  // Use toDouble() to preserve decimal values
+    hum = json['current']['humidity'] ?? 0;
   }
 }

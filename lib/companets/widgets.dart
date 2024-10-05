@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
+import 'package:nasa/companets/colors.dart';
 
 void showToast({
   required String text,
@@ -87,6 +88,7 @@ class MyFormField extends StatelessWidget {
   final dynamic validation;
   final bool isPassword;
   final   Color? fill;
+  final   Color? textcolor;
 
   const MyFormField(
       {super.key,
@@ -104,8 +106,8 @@ class MyFormField extends StatelessWidget {
         this.title="",
         this.validation,
         this.fill,
+        this.textcolor,
       });
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -124,7 +126,7 @@ class MyFormField extends StatelessWidget {
 
           ),
           child: TextFormField(
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color:mainColor),
             readOnly: readOnly!,
             obscureText: isPassword,
             controller: controller,
@@ -156,7 +158,7 @@ class MyFormField extends StatelessWidget {
                 },
                 icon: Icon(
                   suffixIcon,
-                  color: Colors.blue,
+                  color: mainColor,
                 ),
               )
                   : null,
@@ -167,4 +169,33 @@ class MyFormField extends StatelessWidget {
       ],
     );
   }
+}
+
+
+Widget defaultButton(String title,Color color,onPreesed, BuildContext context) {
+  double screenWidth = MediaQuery.of(context).size.width;
+  return SizedBox(
+    width: screenWidth * 0.95,
+    height: 50,
+    child: ElevatedButton(
+      onPressed: onPreesed,
+      style: ElevatedButton.styleFrom(
+
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          backgroundColor: color
+
+
+      ),
+      child: Text(
+        title,
+
+        style: TextStyle(
+          fontSize: 18,
+          color: Colors.white,
+        ),
+      ),
+    ),
+  );
 }

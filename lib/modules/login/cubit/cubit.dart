@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gaza_barcode/screens/login/cubit/states.dart';
+import 'package:nasa/modules/login/cubit/states.dart';
 
 class LoginCubit extends Cubit<LoginStates> {
   LoginCubit() : super(LoginInitialState());
@@ -21,7 +21,6 @@ class LoginCubit extends Cubit<LoginStates> {
 
     FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password).then((value)
     {
-
       emit(LoginSuccessState(value.user!.uid));
     }).catchError((error)
     {
@@ -56,7 +55,6 @@ class LoginCubit extends Cubit<LoginStates> {
   {
     isPassword = !isPassword;
     suffix = isPassword ? Icons.visibility_outlined : Icons.visibility_off_outlined ;
-
     emit(ChangePasswordVisibilityState());
   }
 }
