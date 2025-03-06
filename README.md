@@ -20,6 +20,6 @@
 - **Cubit**: For state management in the app.
 
 ## Video of Usage of The App
-[Watch the video](https://drive.google.com/file/d/1p2CoLQtMnWJVOcgPyYNBR7S_mfFmU8dv/view?usp=sharing)
+<iframe src="https://drive.google.com/file/d/1p2CoLQtMnWJVOcgPyYNBR7S_mfFmU8dv/preview" width="640" height="480" allow="autoplay"></iframe>
 
 
