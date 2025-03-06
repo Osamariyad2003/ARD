@@ -21,5 +21,5 @@
 
 ## Video of Usage of The App
 
-![Watch The Video](https://drive.google.com/file/d/1p2CoLQtMnWJVOcgPyYNBR7S_mfFmU8dv/view)
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1p2CoLQtMnWJVOcgPyYNBR7S_mfFmU8dv/view" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
